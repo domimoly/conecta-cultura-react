@@ -6,7 +6,10 @@ function TarjetaActividad({ actividad, onInscribir }) {
         <p>{actividad.categoria}</p>
         <p>Cupos: {actividad.cupos}</p>
         {actividad.cupos > 0 && actividad.cupos <= 5 && (
-          <p className="text-danger fw-bold">¡Últimos cupos!</p>
+          <p className="text-danger fw-bold">¡Últimos cupos D:!</p>
+        )}
+        {actividad.precio <= 0 && (
+          <p className="text-danger fw-bold">¡Gratis :D!</p>
         )}
         <button
           className="btn btn-primary"
@@ -21,3 +24,6 @@ function TarjetaActividad({ actividad, onInscribir }) {
 }
 
 export default TarjetaActividad;
+
+// TarjetaActividad recibe dos props: un objeto con información y
+// una función que permite avisar al componente padre cuando alguien se inscribe.
