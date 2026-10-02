@@ -1,8 +1,14 @@
+import FormularioActividad from "./FormularioActividad";
+
 function AdminActividades() {
+  function guardar(actividad) {
+    console.log("Actividad guardada:", actividad);
+  }
+
   return (
     <main className="container py-4">
       <h1>Administración de actividades</h1>
-      <p>En esta vista se incorporará el formulario administrativo.</p>
+      <FormularioActividad onGuardar={guardar} />
     </main>
   );
 }
