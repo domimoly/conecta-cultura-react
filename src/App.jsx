@@ -6,6 +6,7 @@ import AdminActividades from "./pages/admin/AdminActividades";
 import NoEncontrada from "./pages/NoEncontrada";
 import Navegacion from "./components/Navegacion";
 import PiePagina from "./components/PiePagina";
+import ActividadForm from "./pages/ActividadForm";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path="/actividades" element={<Actividades />} />
       <Route path="/actividades/:id" element={<DetalleActividad />} />
       <Route path="/admin/actividades" element={<AdminActividades />} />
+      <Route path="/admin/actividades/nueva" element={<ActividadForm />} />
+      <Route path="/admin/actividades/:id/editar" element={<ActividadForm />} />
       <Route path="*" element={<NoEncontrada />} />
     </Routes>
     <PiePagina />
